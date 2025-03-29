@@ -1,0 +1,160 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Tita's Birthday!!!</title>
+  <link rel="stylesheet" href="./album.css">
+  <link rel="icon" href="../pastel.png" type="image/x-icon">
+  
+  </head>
+
+<div class="book">
+    <div class="page">
+      <div class="front cover">
+        <h1>Tita's Album</h1>
+        <p>31.03.2025.<br>De: Tu panelita ❤️</p>
+      </div>
+      <div class="back">
+        <h2>Dedicatoria</h2>
+        <p>Para mi nené, mi hermanita y mi persona favorita. Que cumplas muchos más ❤️</p>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="front">
+        <img src="./bebe1.jpg" alt="Img 1">
+        <!-- <p>Even more, the book height is dicated by the amount of content in the tallest page.
+          The only thing you need to take care of is how much text you put into a page.</p> -->
+      </div>
+      <div class="back">
+        <img src="./bebe2.jpg" alt="Img 2">
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="front">
+        <img src="./cancun-comida.jpg" alt="Img 2">
+      </div>
+      <div class="back">
+        <img src="./tobogan.jpg" alt="Img 2">
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="front">
+        <img src="./hospital.jpg" alt="Img 2">
+      </div>
+      <div class="back">
+        <img src="./espana.jpg" alt="Img 2">
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="front">
+        <video controls width="370" height="130">
+          <source src="./amaca.mp4" type="video/mp4">
+        Tu navegador no es compatible con el vídeo de HTML5.
+        </video>
+      </div>
+      <div class="back">
+        <img src="./mascarilla.jpg" alt="Img 2">
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="front">
+        <video controls width="370" height="130">
+          <source src="./cumple.mp4" type="video/mp4">
+        Tu navegador no es compatible con el vídeo de HTML5.
+        </video>
+      </div>
+      <div class="back">
+        <img src="./depilacion.PNG" alt="Img 2">
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="front">
+        <video controls width="370" height="130">
+          <source src="./IMG_2103.mp4" type="video/mp4">
+        Tu navegador no es compatible con el vídeo de HTML5.
+        </video>
+      </div>
+      <div class="back">
+        <img src="./grado.jpg" alt="Img 2">
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="front">
+        <video controls width="370" height="130">
+          <source src="./durmiendo.mp4" type="video/mp4">
+        Tu navegador no es compatible con el vídeo de HTML5.
+        </video>
+      </div>
+      <div class="back">
+        <img src="./guajira.jpg" alt="Img 2">
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="front">
+        <video controls width="370" height="130">
+          <source src="./poema-1.mp4" type="video/mp4">
+        Tu navegador no es compatible con el vídeo de HTML5.
+        </video>
+      </div>
+      <div class="back">
+        <img src="./venecia.jpg" alt="Img 2">
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="front">
+        <video controls width="370" height="130">
+          <source src="./poema-2.mp4" type="video/mp4">
+        Tu navegador no es compatible con el vídeo de HTML5.
+        </video>
+      </div>
+      <div class="back">
+        <img src="./titlis.jpg" alt="Img 2">
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="front">
+        <video controls width="370" height="130">
+          <source src="./little-mama.mp4" type="video/mp4">
+        Tu navegador no es compatible con el vídeo de HTML5.
+        </video>
+      </div>
+      <div class="back">
+        <img src="./videollamada.PNG" alt="Img 2">
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="front">
+        <img src="./medallo.jpg" alt="Img 2">
+      </div>
+      <div class="back">
+        <img src="./ano-nuevo.PNG" alt="Img 2">
+      </div>
+    </div>
+    
+  </div>
+
+
+  <script>
+    const flipBook = (elBook) => {
+    elBook.style.setProperty("--c", 0); // Set current page
+    elBook.querySelectorAll(".page").forEach((page, idx) => {
+      page.style.setProperty("--i", idx);
+      page.addEventListener("click", (evt) => {
+        if (evt.target.closest("a")) return;
+        const curr = evt.target.closest(".back") ? idx : idx + 1;
+        elBook.style.setProperty("--c", curr);
+      });
+    });
+  };
+  
+  document.querySelectorAll(".book").forEach(flipBook);
+  </script>
